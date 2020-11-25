@@ -1,0 +1,35 @@
+{
+  "name": "jeepee-controller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --env.mode=production",
+    "local": "webpack-dev-server --env.mode=development --hot --inline",
+    "live": "webpack-dev-server --env.mode=production --hot --inline"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/react": "^11.1.0",
+    "@types/styled-components": "^5.1.4",
+    "jest": "^26.6.1",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "jest-styled-components": "^7.0.3",
+    "sinon": "^9.2.1",
+    "styled-components": "^5.2.0",
+    "ts-jest": "^26.4.3",
+    "ts-loader": "^8.0.7",
+    "typescript": "^4.0.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@microsoft/signalr": "^5.0.0"
+  }
+}
