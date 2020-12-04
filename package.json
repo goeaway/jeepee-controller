@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --env.mode=production",
-    "local": "webpack-dev-server --env.mode=development --hot --inline",
-    "live": "webpack-dev-server --env.mode=production --hot --inline"
+    "build": "webpack --env production",
+    "local": "webpack serve"
   },
   "author": "",
   "license": "ISC",
@@ -23,8 +22,8 @@
     "ts-loader": "^8.0.7",
     "typescript": "^4.0.5",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {

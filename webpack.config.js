@@ -1,34 +1,19 @@
-const uglify = require('uglifyjs-webpack-plugin');
 const path = require("path");
 
 module.exports = (env) => {
     return {
-        mode: env.mode === "production" ? "production" : "development",
-        devtool: 'inline-source-map',
+        mode: env.production ? "production" : "development",
+        devtool: env.production ? undefined : 'inline-source-map',
         entry: './src/index.tsx',
         output: {
             filename: 'bundle.js',
             path: __dirname + '/dist',
             publicPath: '/output'
         },
-        optimization: {
-            minimizer: [
-                new uglify({
-                    uglifyOptions: {
-                        compress: {
-                            drop_console: true,
-                        },
-                        output: {
-                            comments: false
-                        }
-                    }
-                })
-            ]
-        },
         resolve: {
             extensions: ['.ts', '.tsx', '.js'],
             alias: {
-                "@config": path.join(__dirname, "src", "config", env.mode === "production" ? "live": "local"),
+                "@config": path.join(__dirname, "src", "config", env.production ? "live": "local"),
                 "@src": path.join(__dirname, "src")
             }
         },
